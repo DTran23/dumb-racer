@@ -25,11 +25,6 @@ export default class App extends Component {
     document.addEventListener('input', this._validate, false);
   }
 
-  componentDidUpdate() {
-    const test = document.getElementById('test-id').value;
-    console.log(test);
-  }
-
   _validate = e => {
     e.preventDefault();
 
@@ -56,8 +51,6 @@ export default class App extends Component {
       color: this.state.color
     };
 
-    // onKeyUp={this._validate}
-    // onChange={this._checkInput}
     return (
       <div className="App">
         <header className="App-header">
