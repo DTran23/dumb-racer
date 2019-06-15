@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.DisplayQuote-previewQuote {
+  width: 50%;
+  line-height: 2.8rem;
+}
+.DisplayQuote-text {
+  width: 80%;
+  line-height: 2.8rem;
+  background-color: transparent;
+  border-style: none;
+  font-size: 1.8rem;
+  color: #fff;
+  height: 200px;
+}
+
+
+.DisplayQuote-inputWord {
+  height: 3rem;
+  width: 15rem;
+  font-size: 1.8rem;
+}
+
+.DisplayQuote-word {
+  margin-top: 4rem;
+  margin-bottom: 5px;
+}
+
+.TypingSpeed-wpm {
+  margin-top: 1rem;
+}
+
+span {
+  position: relative;
+}
+.fu {
+  position: absolute;
+  margin-top: 40px;
+  font-size: 10px;
+  line-height: 1.2rem;
+}
