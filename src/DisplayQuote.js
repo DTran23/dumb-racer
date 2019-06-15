@@ -12,7 +12,7 @@ const displayQuote = props => {
         let message;
         if (index < userInput.length) {
           color = char === userInput[index] ? "green" : "red";
-          message = color === "red" ? "fuck you Matthew" : "";
+          message = color === "red" ? "fuck you Justin you suck mffeerr" : "";
         }
 
         return (
