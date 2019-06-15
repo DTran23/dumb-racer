@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './App.css';
 import TypingSpeed from './TypingSpeed'
 import DisplayQuote from './DisplayQuote.js'
@@ -10,12 +10,12 @@ export default class App extends Component {
 
     this.state = {
       words: [],
-      typed: '',
-      index: 0,
+      // typed: '',
+      // index: 0,
       fullPhrase:
         'Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.',
-      color: 'white',
-      wordIndex: '0',
+      // color: 'white',
+      // wordIndex: '0',
       userInput: "",
       char: 0,
       sec: 0,
@@ -29,29 +29,29 @@ export default class App extends Component {
     const word = this.state.fullPhrase.split(' ')[0] + ' ';
     this.setState({ word });
 
-    ReactDOM.findDOMNode(this).addEventListener('input', this._validate);
+    // ReactDOM.findDOMNode(this).addEventListener('input', this._validate);
   }
 
-  _validate = e => {
-    e.preventDefault();
+  // _validate = e => {
+  //   e.preventDefault();
 
-    const newEvent = e;
+  //   const newEvent = e;
 
-    if (e.target.value !== this.state.word.substring(0, e.target.value.length)) {
-      this.setState({ color: 'red' });
-    } else {
-      this.setState({ color: 'white' });
-    }
+  //   if (e.target.value !== this.state.word.substring(0, e.target.value.length)) {
+  //     this.setState({ color: 'red' });
+  //   } else {
+  //     this.setState({ color: 'white' });
+  //   }
 
-    if (e.target.value === this.state.word) {
-      newEvent.target.value = '';
+  //   if (e.target.value === this.state.word) {
+  //     newEvent.target.value = '';
 
-      const index = this.state.index + 1;
-      const word = this.state.words[index] + ' ';
+  //     const index = this.state.index + 1;
+  //     const word = this.state.words[index] + ' ';
 
-      this.setState({ index, word, color: 'white' });
-    }
-  };
+  //     this.setState({ index, word, color: 'white' });
+  //   }
+  // };
 
   render() {
 
