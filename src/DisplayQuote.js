@@ -6,22 +6,24 @@ const displayQuote = props => {
   userInput = userInput.split("");
 
   return (
-    <div className="DisplayQuote-previewQuote">
-      {splitQuote.map((char, index) => {
-        let color;
-        let message;
-        if (index < userInput.length) {
-          color = char === userInput[index] ? "green" : "red";
-          message = color === "red" ? "fuck you Justin you suck mffeerr" : "";
-        }
+    <div className="DisplayQuote-container">
+      <div className="DisplayQuote-previewQuote">
+        {splitQuote.map((char, index) => {
+          let color;
+          let message;
+          if (index < userInput.length) {
+            color = char === userInput[index] ? "green" : "red";
+            message = color === "red" ? "fuck you Justin you suck mffeerr" : "";
+          }
 
-        return (
-          <span key={index} style={{ backgroundColor: color }}>
-            {char}
-            <p className="fu">{message}</p>
-          </span>
-        );
-      })}
+          return (
+            <span key={index} style={{ backgroundColor: color }}>
+              {char}
+              <p className="fu">{message}</p>
+            </span>
+          );
+        })}
+      </div>
       <input
         id="DisplayQuote-inputWord"
         onChange={onUserInputChange}
