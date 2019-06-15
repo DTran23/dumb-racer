@@ -1,10 +1,11 @@
 import React from 'react';
 
-const TypingSpeed = props => {
-// const {second, char} = props;
+const TypingSpeed = (props) => {
+const {second, char, word} = props;
 
-if (props.second !== 0 && props.char !== 0){
-  const wpm = (props.char/5) / (props.second/60)
+//if user starts typing display wpm, else display nothing
+if (second !== 0 && char !== 0){
+  const wpm = (char/word.length) / (second/60)
   return (
     <div className="TypingSpeed-wpm">{Math.round(wpm)} wpm</div>
   )

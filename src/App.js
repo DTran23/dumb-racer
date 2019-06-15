@@ -11,12 +11,12 @@ export default class App extends Component {
     this.state = {
       words: [],
       // typed: '',
-      // index: 0,
+      index: 0,
       fullPhrase:
         'Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.',
       // color: 'white',
       // wordIndex: '0',
-      userInput: "",
+      userInput: '',
       char: 0,
       sec: 0,
       timerStart: false,
@@ -65,7 +65,7 @@ export default class App extends Component {
           userInput={this.state.userInput}
           onUserInputChange={this.onUserInputChange}
         />
-        <TypingSpeed second={this.state.sec} char={this.state.char} />
+        <TypingSpeed second={this.state.sec} char={this.state.char} word={this.state.word}/>
         </header>
       </div>
     );
@@ -73,25 +73,18 @@ export default class App extends Component {
 
   onUserInputChange = (e) => {
     const value = e.target.value;
-    this.setTimer();
-    this.onFinish();
+    this.onStartTimer();
+    this.onFinishTimer();
     this.setState({
       userInput: value,
       char: this.calculateCorrectChars(value)
     })
+    console.log(this.state.char)
   }
   
-  onFinish(userInput) {
-    if (userInput === this.state.fullPhrase) {
-      clearInterval(this.interval);
-      this.setState({
-        timerFinished: true
-      })
-    }
-  }
-  setTimer() {
+  onStartTimer() {
     if (!this.state.timerStart) {
-      this.setState({setTimer: true});
+      this.setState({timerStart: true});
       this.interval = setInterval(() => {
         this.setState(prevProps => {
           return {sec: prevProps.sec + 1}
@@ -100,9 +93,22 @@ export default class App extends Component {
     }
   }
 
+  onFinishTimer(userInput) {
+    if (userInput === this.state.fullPhrase) {
+      clearInterval(this.interval);
+      this.setState({
+        timerFinished: true
+      })
+    }
+  }
+  
   calculateCorrectChars(userInput) {
+    //remove whitespace
     const text = this.state.fullPhrase.replace(' ', '');
-    return userInput.replace(' ', '').split('').filter((char, i) => char === text[i]).length;
+    //remove whitespace from user input and turn into array
+    userInput = userInput.replace(' ', '').split('')
+    //return how many characters user is typing correctly
+    return userInput.filter((char, i) => char === text[i]).length
   }
 }
 

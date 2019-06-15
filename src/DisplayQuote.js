@@ -3,7 +3,6 @@ import React from "react";
 const displayQuote = props => {
   let { quote, userInput, onUserInputChange } = props;
   const splitQuote = quote.split("");
-  userInput = userInput.split("");
 
   return (
     <div className="DisplayQuote-container">
