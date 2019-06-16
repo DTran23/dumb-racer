@@ -12,8 +12,10 @@ export default class App extends Component {
       words: [],
       // typed: '',
       index: 0,
+      finishedMessage: "Congrats mfferr",
       fullPhrase:
-        "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
+      "testing this shit",
+        // "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
       // color: 'white',
       // wordIndex: '0',
       userInput: "",
@@ -63,7 +65,9 @@ export default class App extends Component {
             quote={this.state.fullPhrase}
             userInput={this.state.userInput}
             onUserInputChange={this.onUserInputChange}
-            onFinish={this.state.finished}
+            onFinish={this.state.timerFinished}
+            onFinishMessage={this.state.finishedMessage}
+
           />
           <TypingSpeed
             second={this.state.sec}
@@ -77,14 +81,18 @@ export default class App extends Component {
 
   onUserInputChange = e => {
     let value = e.target.value;
-
+    
+    if (this.state.timerFinished) {
+      console.log('Finished')
+      e.target.value = "";
+    }
     this.onStartTimer();
     this.onFinishTimer(value);
     this.setState({
       userInput: value,
       char: this.calculateCorrectChars(value)
     });
-    console.log(this.state.char);
+
   };
   
     calculateCorrectChars(userInput) {
@@ -111,7 +119,7 @@ export default class App extends Component {
     if (userInput === this.state.fullPhrase) {
       clearInterval(this.interval);
       this.setState({
-        timerFinished: true
+        timerFinished: true,
       });
     }
   }
