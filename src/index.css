@@ -23,6 +23,7 @@ code {
   width: 100%;
   text-align: center;
   line-height: 5rem;
+  color: #65e01a;
 }
 
 .DisplayQuote-text {
@@ -68,7 +69,10 @@ span {
 }
 .fu {
   position: absolute;
-  margin-top: 40px;
-  font-size: 10px;
+  background-color: red;
+  color: #fff;
+  margin-top: 50px;
+  margin-left: -250px;
+  font-size: 16px;
   line-height: 1.2rem;
 }
