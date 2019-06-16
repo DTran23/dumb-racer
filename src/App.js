@@ -10,14 +10,8 @@ export default class App extends Component {
 
     this.state = {
       words: [],
-      // typed: '',
       index: 0,
-      finishedMessage: "Congrats mfferr",
-      fullPhrase:
-      "testing this shit",
-        // "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
-      // color: 'white',
-      // wordIndex: '0',
+      fullPhrase: "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
       userInput: "",
       char: 0,
       sec: 0,
@@ -83,9 +77,9 @@ export default class App extends Component {
     let value = e.target.value;
     
     if (this.state.timerFinished) {
-      console.log('Finished')
       e.target.value = "";
     }
+
     this.onStartTimer();
     this.onFinishTimer(value);
     this.setState({
