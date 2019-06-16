@@ -2,12 +2,12 @@ import React from "react";
 
 const displayQuote = props => {
   let { quote, userInput, onUserInputChange } = props;
-  const splitQuote = quote.split("");
+  const splitQuoteIntoChars = quote.split("");
 
   return (
     <div className="DisplayQuote-container">
-      <div className="DisplayQuote-previewQuote">
-        {splitQuote.map((char, index) => {
+      <div className="DisplayQuote-previewQuote" >
+        {splitQuoteIntoChars.map((char, index) => {
           let color;
           let message;
           if (index < userInput.length) {
@@ -27,6 +27,7 @@ const displayQuote = props => {
         id="DisplayQuote-inputWord"
         onChange={onUserInputChange}
         placeholder={props.word}
+        readOnly={props.onFinish}
       />
     </div>
   );
