@@ -1,7 +1,8 @@
 import React from "react";
+import TypingSpeed from "./TypingSpeed";
 
 const displayQuote = props => {
-  let { quote, userInput, onUserInputChange, onFinish } = props;
+  let { quote, userInput, onUserInputChange, onFinish, onFinishButton } = props;
   const splitQuoteIntoChars = quote.split("");
   if (onFinish) {
     return (
@@ -18,16 +19,13 @@ const displayQuote = props => {
       <div className="DisplayQuote-previewQuote" >
         {splitQuoteIntoChars.map((char, index) => {
           let color;
-          let message;
           if (index < userInput.length) {
-            color = char === userInput[index] ? "green" : "red";
-            message = color === "red" ? "fuck you Justin you suck mffeerr" : "";
+          color = char === userInput[index] ? "#04ad67" : "#f6454b";
           }
 
           return (
-            <span key={index} style={{ backgroundColor: color }}>
+            <span key={index} style={{ background: color }}>
               {char}
-              <p className="fu">{message}</p>
             </span>
           );
         })}
@@ -35,8 +33,8 @@ const displayQuote = props => {
       <input
         id="DisplayQuote-inputWord"
         onChange={onUserInputChange}
-        placeholder={props.word}
-        readOnly={props.onFinish}
+        // placeholder="Start Typing to Play"
+        autofocus="true"
       />
     </div>
   );

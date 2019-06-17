@@ -23,7 +23,7 @@ code {
   width: 100%;
   text-align: center;
   line-height: 5rem;
-  color: #65e01a;
+  color: #04ad67;
 }
 
 .DisplayQuote-text {
@@ -37,6 +37,11 @@ code {
 }
 .DisplayQuote-previewQuote {
   align-self: center;
+  border: 1px solid #251f3f;
+  background-color: #070b24;
+  /* background: linear-gradient(103deg, rgb(8, 11, 31) 25%, rgb(8, 8, 46) 65%); */
+
+  padding: 80px 80px;
 }
 
 .DisplayQuote-container {
@@ -48,11 +53,25 @@ code {
 }
 
 #DisplayQuote-inputWord {
+  border: 1px solid #34fffd;
+  background-color: #070b24;
+  color: #fff;
   margin-top: 4rem;
   align-self: center;
-  height: 3rem;
+  height: 4rem;
   width: 50%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  padding: 0px 80px;
+}
+
+#DisplayQuote-inputWord:focus {
+  outline: none;
+}
+::placeholder {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .DisplayQuote-word {
@@ -61,18 +80,15 @@ code {
 }
 
 .TypingSpeed-wpm {
-  margin-top: 1rem;
+  color: #ffc900;
+  margin-top: 2rem;
+  text-align: right;
+  margin-left: 50rem;
+  font-size: 1.4rem;
 }
 
-span {
-  position: relative;
-}
-.fu {
-  position: absolute;
-  background-color: red;
+.TypingSpeed-num {
   color: #fff;
-  margin-top: 50px;
-  margin-left: -250px;
-  font-size: 16px;
-  line-height: 1.2rem;
+  font-size: 4rem;
+  font-weight: 700;
 }

@@ -21,9 +21,9 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ words: this.state.fullPhrase.split(" ") });
-    const word = this.state.fullPhrase.split(" ")[0] + " ";
-    this.setState({ word });
+    // this.setState({ words: this.state.fullPhrase.split(" ") });
+    // const word = this.state.fullPhrase.split(" ")[0] + " ";
+    // this.setState({ word });
     
     // ReactDOM.findDOMNode(this).addEventListener('input', this._validate);
   }
@@ -60,7 +60,7 @@ export default class App extends Component {
             userInput={this.state.userInput}
             onUserInputChange={this.onUserInputChange}
             onFinish={this.state.timerFinished}
-            onFinishMessage={this.state.finishedMessage}
+            onFinishButton={this.onRestart}
 
           />
           <TypingSpeed
@@ -72,6 +72,7 @@ export default class App extends Component {
       </div>
     );
   }
+
 
   onUserInputChange = e => {
     let value = e.target.value;
