@@ -11,3 +11,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.DisplayQuote-previewQuote {
+  width: 50%;
+  text-align: left;
+  line-height: 2.8rem;
+}
+
+.DisplayQuote-h1 {
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  color: #04ad67;
+}
+
+.DisplayQuote-text {
+  width: 80%;
+  line-height: 2.8rem;
+  background-color: transparent;
+  border-style: none;
+  font-size: 1.8rem;
+  color: #fff;
+  height: 200px;
+}
+.DisplayQuote-previewQuote {
+  align-self: center;
+  border: 1px solid #251f3f;
+  background-color: #070b24;
+  /* background: linear-gradient(103deg, rgb(8, 11, 31) 25%, rgb(8, 8, 46) 65%); */
+
+  padding: 80px 80px;
+}
+
+.DisplayQuote-container {
+  display: flex;
+  width: 100rem;
+  flex-direction: column;
+  align-content: center;
+  font-size: 1.8rem;
+}
+
+#DisplayQuote-inputWord {
+  border: 1px solid #34fffd;
+  background-color: #070b24;
+  color: #fff;
+  margin-top: 4rem;
+  align-self: center;
+  height: 4rem;
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 0px 80px;
+}
+
+#DisplayQuote-inputWord:focus {
+  outline: none;
+}
+::placeholder {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.DisplayQuote-word {
+  margin-top: 4rem;
+  margin-bottom: 5px;
+}
+
+.TypingSpeed-wpm {
+  color: #ffc900;
+  margin-top: 2rem;
+  text-align: right;
+  margin-left: 50rem;
+  font-size: 1.4rem;
+}
+
+.TypingSpeed-num {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+}
