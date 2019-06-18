@@ -1,10 +1,12 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #070a1d;
 }
 
 code {
@@ -80,6 +82,9 @@ code {
 }
 
 .TypingSpeed-wpm {
+  position: absolute;
+  right: 400px;
+  bottom: 70px;
   color: #ffc900;
   margin-top: 2rem;
   text-align: right;
@@ -91,4 +96,33 @@ code {
   color: #fff;
   font-size: 4rem;
   font-weight: 700;
+}
+
+.Background-img {
+  position: relative;
+  height: 500px;
+  width: 100vw;
+  margin-bottom: 40px;
+  background: url("./images/bg.jpg");
+  background-position: bottom left;
+  animation: move-background 8s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes move-background {
+  from { background-position: bottom left; }
+  to {background-position: bottom right; }
+}
+
+.Car1-img {
+  position: absolute;
+  left: 500px;
+  bottom: 40px;
+  overflow: hidden;
+  /* animation: driving 10s linear infinite; */
+}
+
+@keyframes driving {
+  from { left: 0px }
+  to {left: 2500px }
 }

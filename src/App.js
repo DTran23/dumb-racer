@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "./App.css";
 import TypingSpeed from "./TypingSpeed";
 import DisplayQuote from "./DisplayQuote.js";
+import Background from "./Background.js";
+
 
 export default class App extends Component {
   constructor() {
@@ -53,6 +55,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <Background />
           <DisplayQuote
             style={{ color: this.state.color }}
             word={this.state.word}
