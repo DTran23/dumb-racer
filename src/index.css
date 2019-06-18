@@ -105,7 +105,7 @@ code {
   margin-bottom: 40px;
   background: url("./images/bg.jpg");
   background-position: bottom left;
-  animation: move-background 8s linear infinite;
+  animation: move-background 5s linear infinite;
   overflow: hidden;
 }
 
@@ -118,11 +118,13 @@ code {
   position: absolute;
   left: 500px;
   bottom: 40px;
-  overflow: hidden;
-  /* animation: driving 10s linear infinite; */
+  animation: driving 30s linear infinite;
+}
+img.Car1-img {
+  width: 50px;
 }
 
 @keyframes driving {
-  from { left: 0px }
-  to {left: 2500px }
+  from { left: -50px }
+  to {left: 2200px }
 }
