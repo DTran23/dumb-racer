@@ -133,8 +133,17 @@ code {
   /* left: 200px; */
   bottom: 225px;
   transition: all 1s linear;
-  /* animation: car1 8s linear infinite; */
+  /* animation: carfinish 8s linear infinite; */
 }
+
+.Car-finish {
+  position: absolute;
+  /* left: 200px; */
+  bottom: 225px;
+  transition: all 1s linear;
+  animation: carfinish 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
 .Car2-img {
   position: absolute;
   left: 300px;
@@ -149,12 +158,12 @@ code {
   animation: car3 55s linear infinite;
 }
 
-@keyframes car1 {
+@keyframes carfinish {
   from {
     left: -100px;
   }
   to {
-    left: 250px;
+    left: 500px;
   }
 }
 

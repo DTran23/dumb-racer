@@ -8,10 +8,10 @@ import styled, { css, keyframes } from "styled-components";
 
 const fadeIn = keyframes`
   from {
-    left: -300;
+    left: -300px;
   }
   to {
-    right: 300;
+    left: 300px;
   }
 `;
 
@@ -27,7 +27,7 @@ let finishLineStyle = {
 //   `;
 
 let carFinishStyle = styled.div`
-  animation: ${fadeIn} 1s linear;
+  animation: ${fadeIn} 1s linear infinite;
 `;
 
 const Background = props => {
@@ -35,7 +35,7 @@ const Background = props => {
   if (onFinish) {
     return (
       <div className="Background-img" style={finishLineStyle}>
-        <Car1 style={carFinishStyle} />
+        <Car1 onFinish={onFinish} />
       </div>
     );
   } else {

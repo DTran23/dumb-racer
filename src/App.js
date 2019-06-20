@@ -4,7 +4,6 @@ import "./App.css";
 import TypingSpeed from "./TypingSpeed";
 import DisplayQuote from "./DisplayQuote.js";
 import Background from "./Background.js";
-import styled, { keyframes } from "styled-components";
 
 // import Car1 from "./Car1";
 
@@ -15,8 +14,8 @@ export default class App extends Component {
     this.state = {
       words: [],
       index: 0,
-      fullPhrase: "Testing",
-      // "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
+      fullPhrase:
+        "Your self-image is the result of all you have given your subconscious mind as a database, so regardless of your background, what you are willing to become is the only reality that counts.",
       userInput: "",
       char: 0,
       sec: 0,
