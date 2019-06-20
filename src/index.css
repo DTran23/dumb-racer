@@ -15,7 +15,7 @@ code {
 }
 
 .DisplayQuote-previewQuote {
-  width: 60%;
+  width: 40%;
   text-align: left;
   font-size: 1.6rem;
   line-height: 2.8rem;
@@ -28,7 +28,7 @@ code {
   color: #04ad67;
 }
 
-.DisplayQuote-text {
+/* .DisplayQuote-text {
   width: 80%;
   line-height: 2.8rem;
   background-color: transparent;
@@ -36,9 +36,10 @@ code {
   font-size: 1.6rem;
   color: #fff;
   height: 200px;
-}
+} */
 
 .DisplayQuote-previewQuote {
+  position: relative;
   align-self: center;
   border: 1px solid #251f3f;
   background-color: #070b24;
@@ -49,6 +50,7 @@ code {
 
 .DisplayQuote-container {
   display: flex;
+  position: relative;
   width: 100rem;
   flex-direction: column;
   align-content: center;
@@ -56,16 +58,20 @@ code {
 }
 
 #DisplayQuote-inputWord {
-  border: 1px solid #34fffd;
-  background-color: #070b24;
-  color: #fff;
-  margin-top: 4rem;
+  position: absolute;
+  /* border: 1px solid #34fffd; */
+  border: none;
+  bottom: 23%;
+  left: 15%;
+  height: 60%;
+  background-color: transparent;
+  color: transparent;
+  /* margin-top: 4rem; */
   align-self: center;
-  height: 4rem;
-  width: 60%;
-  font-size: 1.5rem;
-  padding: 0px 80px;
-  margin-bottom: 50px;
+  width: 40%;
+  font-size: 1.8rem;
+  padding: 40px 80px;
+  z-index: 10;
 }
 
 #DisplayQuote-inputWord:focus {
@@ -85,7 +91,7 @@ code {
 
 .TypingSpeed-wpm {
   position: absolute;
-  right: 330px;
+  right: 200px;
   bottom: 110px;
   color: #ffc900;
   margin-top: 2rem;
@@ -148,7 +154,7 @@ code {
   position: absolute;
   left: 300px;
   bottom: 180px;
-  animation: car2 60s linear infinite;
+  animation: car2 50s linear infinite;
 }
 
 .Car3-img {

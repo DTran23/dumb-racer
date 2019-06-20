@@ -26,6 +26,10 @@ export default class App extends Component {
     };
   }
 
+  componentDidMount() {
+    window.addEventListener("input", this.onUserInputChange);
+  }
+
   render() {
     return (
       <div className="App">
@@ -39,7 +43,7 @@ export default class App extends Component {
             word={this.state.word}
             quote={this.state.fullPhrase}
             userInput={this.state.userInput}
-            onUserInputChange={this.onUserInputChange}
+            // onUserInputChange={this.onUserInputChange}
             onFinish={this.state.timerFinished}
             onFinishButton={this.onRestart}
           />
@@ -59,7 +63,7 @@ export default class App extends Component {
     if (this.state.timerFinished) {
       e.target.value = "";
     }
-
+    console.log(value);
     this.onStartTimer();
     this.onFinishTimer(value);
     // this.carPositioningHandler(value);

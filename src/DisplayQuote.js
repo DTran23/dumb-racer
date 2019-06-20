@@ -32,7 +32,7 @@ const displayQuote = props => {
         <input
           id="DisplayQuote-inputWord"
           onChange={onUserInputChange}
-          autofocus="true"
+          autoFocus={true}
           autoComplete="off"
         />
       </div>

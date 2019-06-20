@@ -1,5 +1,5 @@
 import React from "react";
-import car2 from "./images/civic_sm.png";
+import car2 from "./images/newcar_sm.png";
 const Car2 = () => {
   return (
     <div className="Car2-img">
