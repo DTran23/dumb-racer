@@ -14,10 +14,10 @@ code {
     monospace;
 }
 
-
 .DisplayQuote-previewQuote {
-  width: 50%;
+  width: 60%;
   text-align: left;
+  font-size: 1.6rem;
   line-height: 2.8rem;
 }
 
@@ -33,17 +33,18 @@ code {
   line-height: 2.8rem;
   background-color: transparent;
   border-style: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #fff;
   height: 200px;
 }
+
 .DisplayQuote-previewQuote {
   align-self: center;
   border: 1px solid #251f3f;
   background-color: #070b24;
   /* background: linear-gradient(103deg, rgb(8, 11, 31) 25%, rgb(8, 8, 46) 65%); */
 
-  padding: 80px 80px;
+  padding: 40px 80px;
 }
 
 .DisplayQuote-container {
@@ -61,9 +62,10 @@ code {
   margin-top: 4rem;
   align-self: center;
   height: 4rem;
-  width: 50%;
+  width: 60%;
   font-size: 1.5rem;
   padding: 0px 80px;
+  margin-bottom: 50px;
 }
 
 #DisplayQuote-inputWord:focus {
@@ -83,8 +85,8 @@ code {
 
 .TypingSpeed-wpm {
   position: absolute;
-  right: 400px;
-  bottom: 70px;
+  right: 330px;
+  bottom: 110px;
   color: #ffc900;
   margin-top: 2rem;
   text-align: right;
@@ -98,33 +100,87 @@ code {
   font-weight: 700;
 }
 
+.Background-border {
+  /* border: 1px solid #34fffd; */
+  padding: 3px 5px;
+  height: 460px;
+}
+
 .Background-img {
+  /* border: 1px solid #34fffd; */
   position: relative;
   height: 500px;
-  width: 100vw;
-  margin-bottom: 40px;
-  background: url("./images/bg.jpg");
+  width: 100%;
+  margin-bottom: 60px;
+  background-color: #080416;
+  /* background: url("./images/forest-bg.jpg"); */
   background-position: bottom left;
-  animation: move-background 5s linear infinite;
+  animation: move-background 30s linear infinite;
   overflow: hidden;
 }
 
 @keyframes move-background {
-  from { background-position: bottom left; }
-  to {background-position: bottom right; }
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
 }
 
 .Car1-img {
   position: absolute;
-  left: 500px;
-  bottom: 40px;
-  animation: driving 30s linear infinite;
+  /* left: 200px; */
+  bottom: 225px;
+  transition: all 1s linear;
+  /* animation: car1 8s linear infinite; */
 }
-img.Car1-img {
-  width: 50px;
+.Car2-img {
+  position: absolute;
+  left: 300px;
+  bottom: 180px;
+  animation: car2 60s linear infinite;
 }
 
-@keyframes driving {
-  from { left: -50px }
-  to {left: 2200px }
+.Car3-img {
+  position: absolute;
+  left: 100px;
+  bottom: 135px;
+  animation: car3 55s linear infinite;
+}
+
+@keyframes car1 {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 250px;
+  }
+}
+
+@keyframes car2 {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 2500px;
+  }
+}
+
+@keyframes car3 {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 2500px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

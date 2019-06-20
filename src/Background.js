@@ -1,14 +1,54 @@
 import React from "react";
 import Car1 from "./Car1";
+import Car2 from "./Car2";
+import Car3 from "./Car3";
+import bg from "./images/forest-bg.jpg";
+import finishLineBG from "./images/finish-line.jpg";
+import styled, { css, keyframes } from "styled-components";
 
-const Background = () => {
-  return (
-    <div className="Background-img">
-      <Car1 />
+const fadeIn = keyframes`
+  from {
+    left: -300;
+  }
+  to {
+    right: 300;
+  }
+`;
 
-    </div>
-  )
-}
+let finishLineStyle = {
+  backgroundImage: `url(${finishLineBG})`,
+  transition: "opacity 1s linear",
+  animation: "fade 1s linear"
+};
 
+// const animation = props =>
+//   css`
+//     ${fadeIn};
+//   `;
 
-export default Background
+let carFinishStyle = styled.div`
+  animation: ${fadeIn} 1s linear;
+`;
+
+const Background = props => {
+  const { position, onFinish } = props;
+  if (onFinish) {
+    return (
+      <div className="Background-img" style={finishLineStyle}>
+        <Car1 style={carFinishStyle} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Background-img" style={{ backgroundImage: `url(${bg})` }}>
+        <div className="Background-border">
+          <Car1 position={position} />
+          <Car2 />
+          <Car3 />
+        </div>
+      </div>
+    );
+  }
+};
+
+export default Background;
