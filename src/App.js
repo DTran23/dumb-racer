@@ -27,7 +27,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("input", this.onUserInputChange);
+    // window.addEventListener("input", this.onUserInputChange);
   }
 
   render() {
@@ -43,7 +43,7 @@ export default class App extends Component {
             word={this.state.word}
             quote={this.state.fullPhrase}
             userInput={this.state.userInput}
-            // onUserInputChange={this.onUserInputChange}
+            onUserInputChange={this.onUserInputChange}
             onFinish={this.state.timerFinished}
             onFinishButton={this.onRestart}
           />
@@ -66,7 +66,6 @@ export default class App extends Component {
     console.log(value);
     this.onStartTimer();
     this.onFinishTimer(value);
-    // this.carPositioningHandler(value);
     this.setState({
       userInput: value,
       char: this.calculateCorrectChars(value),
@@ -80,7 +79,6 @@ export default class App extends Component {
     //remove whitespace from user input and turn into array
     userInput = userInput.replace(" ", "").split("");
     //return how many characters user is typing correctly
-    console.log(userInput);
     return userInput.filter((char, i) => char === text[i]).length;
   }
 

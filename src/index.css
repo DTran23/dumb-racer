@@ -28,23 +28,11 @@ code {
   color: #04ad67;
 }
 
-/* .DisplayQuote-text {
-  width: 80%;
-  line-height: 2.8rem;
-  background-color: transparent;
-  border-style: none;
-  font-size: 1.6rem;
-  color: #fff;
-  height: 200px;
-} */
-
 .DisplayQuote-previewQuote {
   position: relative;
   align-self: center;
   border: 1px solid #251f3f;
   background-color: #070b24;
-  /* background: linear-gradient(103deg, rgb(8, 11, 31) 25%, rgb(8, 8, 46) 65%); */
-
   padding: 40px 80px;
 }
 
@@ -59,14 +47,12 @@ code {
 
 #DisplayQuote-inputWord {
   position: absolute;
-  /* border: 1px solid #34fffd; */
   border: none;
   bottom: 23%;
   left: 15%;
   height: 60%;
   background-color: transparent;
   color: transparent;
-  /* margin-top: 4rem; */
   align-self: center;
   width: 40%;
   font-size: 1.8rem;

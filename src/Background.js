@@ -2,7 +2,7 @@ import React from "react";
 import Car1 from "./Car1";
 import Car2 from "./Car2";
 import Car3 from "./Car3";
-import bg from "./images/forest-bg.jpg";
+import bg from "./images/forest-bg3.jpg";
 import finishLineBG from "./images/finish-line.jpg";
 
 let finishLineStyle = {

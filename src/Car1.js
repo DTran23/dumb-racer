@@ -1,5 +1,5 @@
 import React from "react";
-import car1 from "./images/apollo.png";
+import car1 from "./images/really-black-car.png";
 
 const Car1 = props => {
   const { position, onFinish } = props;

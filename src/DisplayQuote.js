@@ -1,8 +1,7 @@
 import React from "react";
-import TypingSpeed from "./TypingSpeed";
 
 const displayQuote = props => {
-  let { quote, userInput, onUserInputChange, onFinish, onFinishButton } = props;
+  let { quote, userInput, onUserInputChange, onFinish } = props;
   const splitQuoteIntoChars = quote.split("");
   if (onFinish) {
     return (
@@ -28,13 +27,13 @@ const displayQuote = props => {
               </span>
             );
           })}
+          <input
+            id="DisplayQuote-inputWord"
+            onChange={onUserInputChange}
+            autoFocus={true}
+            autoComplete="off"
+          />
         </div>
-        <input
-          id="DisplayQuote-inputWord"
-          onChange={onUserInputChange}
-          autoFocus={true}
-          autoComplete="off"
-        />
       </div>
     );
   }
