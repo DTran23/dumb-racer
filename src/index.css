@@ -19,37 +19,17 @@ code {
   text-align: left;
   font-size: 1.6rem;
   line-height: 2.8rem;
-}
-
-.DisplayQuote-h1 {
-  width: 100%;
-  text-align: center;
-  line-height: 5rem;
-  color: #04ad67;
-}
-
-.DisplayQuote-text {
-  width: 80%;
-  line-height: 2.8rem;
-  background-color: transparent;
-  border-style: none;
-  font-size: 1.6rem;
-  color: #fff;
-  height: 200px;
-}
-
-.DisplayQuote-previewQuote {
   align-self: center;
-  border: 1px solid #251f3f;
+  border: 2px solid #34fffd;
   background-color: #070b24;
-  /* background: linear-gradient(103deg, rgb(8, 11, 31) 25%, rgb(8, 8, 46) 65%); */
-
+  box-shadow: inset 0 0 70px rgb(45, 33, 128, 0.5),
+    0px 0px 20px 2px rgba(46, 33, 128, 0.8);
   padding: 40px 80px;
 }
 
 .DisplayQuote-container {
   display: flex;
-  width: 100rem;
+  width: 80%;
   flex-direction: column;
   align-content: center;
   font-size: 1.8rem;
@@ -57,6 +37,7 @@ code {
 
 #DisplayQuote-inputWord {
   border: 1px solid #34fffd;
+  border: none;
   background-color: #070b24;
   color: #fff;
   margin-top: 4rem;
@@ -65,43 +46,45 @@ code {
   width: 60%;
   font-size: 1.5rem;
   padding: 0px 80px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  /* border: 2px solid rgba(94, 255, 255, 0.5); */
+  /*  */
 }
 
 #DisplayQuote-inputWord:focus {
-  outline: none;
-}
-::placeholder {
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 300;
+  outline-color: #34fffd;
 }
 
-.DisplayQuote-word {
-  margin-top: 4rem;
-  margin-bottom: 5px;
-}
-
-.TypingSpeed-wpm {
-  position: absolute;
-  right: 330px;
-  bottom: 110px;
+.TypingSpeed-wpm,
+.NosGauge-wpm {
+  background-color: transparent;
+  align-self: center;
+  justify-content: center;
   color: #ffc900;
-  margin-top: 2rem;
-  text-align: right;
-  margin-left: 50rem;
-  font-size: 1.4rem;
 }
 
-.TypingSpeed-num {
+.TypingSpeed-num,
+.NosGauge-num {
+  text-shadow: 0px 0px 0px black, 0 0 65px rgb(45, 33, 128, 0.9),
+    0 0 5px rgb(52, 255, 253, 0.3);
   color: #fff;
-  font-size: 4rem;
+  line-height: 7rem;
+  align-self: center;
+  justify-self: center;
+  font-size: 5rem;
   font-weight: 700;
+}
+.TypingSpeed-num-sm,
+.NosGauge-num-sm {
+  text-transform: uppercase;
+  font-size: 1rem;
+  justify-content: center;
+  color: #34fffd;
+  text-shadow: 0px 0px 0px black, 0 0 25px rgb(45, 33, 128, 0.5),
+    0 0 5px rgb(52, 255, 253, 0.3);
 }
 
 .Background-border {
-  /* border: 1px solid #34fffd; */
   padding: 3px 5px;
   height: 460px;
 }
@@ -130,15 +113,12 @@ code {
 
 .Car1-img {
   position: absolute;
-  /* left: 200px; */
   bottom: 225px;
   transition: all 1s linear;
-  /* animation: carfinish 8s linear infinite; */
 }
 
 .Car-finish {
   position: absolute;
-  /* left: 200px; */
   bottom: 225px;
   transition: all 1s linear;
   animation: carfinish 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -192,4 +172,84 @@ code {
   to {
     opacity: 1;
   }
+}
+
+.UI-container {
+  display: flex;
+  margin-top: 2rem;
+  align-content: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+}
+
+.CarGauge,
+.NosGauge {
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 50%;
+  height: 12vw;
+  width: 12vw;
+  box-shadow: inset 0 0 40px rgb(45, 33, 128, 0.5),
+    0px 0px 10px 2px rgb(45, 33, 128, 0.5);
+  background-color: rgba(7, 11, 36, 0.3);
+  border: 2px solid rgba(94, 255, 255, 0.5);
+  /* (45, 33, 128, 0.5) */
+}
+.CarGauge-border,
+.NosGauge-border {
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-shadow: inset 0 0 70px rgb(45, 33, 128, 0.8),
+    0px 0px 20px 2px rgba(46, 33, 128, 0.809);
+  border: 3px solid #5effff;
+  border-radius: 50%;
+  height: 20vw;
+  width: 30vw;
+}
+
+.CarGauge-border {
+  margin-left: 80px;
+}
+
+.NosGauge-border {
+  margin-right: 80px;
+}
+
+.Minimap-container {
+  display: flex;
+  height: 5rem;
+  justify-content: center;
+}
+
+.Minimap-bar {
+  position: relative;
+  justify-self: center;
+  margin-bottom: 2rem;
+  height: 5px;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 25px 1px rgb(45, 33, 128, 0.5);
+  background-color: #5effff;
+  width: 60%;
+}
+
+.Minimap-dot {
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  top: -12px;
+  left: 30px;
+  align-content: center;
+  justify-content: center;
+  width: 1.4vw;
+  border-radius: 3rem;
+  border: 4px solid #5effff;
+  height: 1.4vw;
+  background-color: #070b24;
+  box-shadow: 0px 0px 25px 1px rgb(45, 33, 128, 0.5);
 }

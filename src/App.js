@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
 import "./App.css";
-import TypingSpeed from "./TypingSpeed";
-import DisplayQuote from "./DisplayQuote.js";
-import Background from "./Background.js";
+// import TypingSpeed from "./TypingSpeed";
+import CarGauge from "./CarGauge";
+import DisplayQuote from "./DisplayQuote";
+import Background from "./Background";
 
 // import Car1 from "./Car1";
 
@@ -29,7 +30,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App-container">
           <Background
             position={this.state.carPositioning}
             onFinish={this.state.timerFinished}
@@ -42,13 +43,11 @@ export default class App extends Component {
             onUserInputChange={this.onUserInputChange}
             onFinish={this.state.timerFinished}
             onFinishButton={this.onRestart}
-          />
-          <TypingSpeed
             second={this.state.sec}
             char={this.state.char}
             word={this.state.word}
           />
-        </header>
+        </div>
       </div>
     );
   }

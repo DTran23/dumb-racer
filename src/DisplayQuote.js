@@ -1,8 +1,18 @@
 import React from "react";
-import TypingSpeed from "./TypingSpeed";
+import CarGauge from "./CarGauge";
+import NosGauge from "./NosGauge";
+import Minimap from "./Minimap";
 
 const displayQuote = props => {
-  let { quote, userInput, onUserInputChange, onFinish, onFinishButton } = props;
+  let {
+    quote,
+    userInput,
+    onUserInputChange,
+    onFinish,
+    second,
+    char,
+    word
+  } = props;
   const splitQuoteIntoChars = quote.split("");
   if (onFinish) {
     return (
@@ -14,27 +24,32 @@ const displayQuote = props => {
     );
   } else {
     return (
-      <div className="DisplayQuote-container">
-        <div className="DisplayQuote-previewQuote">
-          {splitQuoteIntoChars.map((char, index) => {
-            let color;
-            if (index < userInput.length) {
-              color = char === userInput[index] ? "#04ad67" : "#f6454b";
-            }
+      <div className="UI-container">
+        <CarGauge second={second} char={char} word={word} />
+        <div className="DisplayQuote-container">
+          <Minimap />
+          <div className="DisplayQuote-previewQuote">
+            {splitQuoteIntoChars.map((char, index) => {
+              let color;
+              if (index < userInput.length) {
+                color = char === userInput[index] ? "#04ad67" : "#ff373e";
+              }
 
-            return (
-              <span key={index} style={{ background: color }}>
-                {char}
-              </span>
-            );
-          })}
+              return (
+                <span key={index} style={{ background: color }}>
+                  {char}
+                </span>
+              );
+            })}
+          </div>
+          <input
+            id="DisplayQuote-inputWord"
+            onChange={onUserInputChange}
+            autofocus="true"
+            autoComplete="off"
+          />
         </div>
-        <input
-          id="DisplayQuote-inputWord"
-          onChange={onUserInputChange}
-          autofocus="true"
-          autoComplete="off"
-        />
+        <NosGauge />
       </div>
     );
   }
