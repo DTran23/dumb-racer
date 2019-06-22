@@ -1,9 +1,10 @@
 import React from "react";
 import DisplayQuoteInput from "../DisplayQuote/DisplayQuoteInput";
 import DisplayQuoteArea from "../DisplayQuote/DisplayQuoteArea";
-import CarWPMGauge from "../CarWPMGauge/CarWPMGauge";
-import NosGauge from "../NosGauge/NosGauge";
+import CarWPMGauge from "../Gauges/CarWPMGauge";
+import NosGauge from "../Gauges/NosGauge";
 import Minimap from "../Minimap/Minimap";
+import "./DisplayQuote.scss";
 
 const displayQuote = props => {
   const {
@@ -22,7 +23,7 @@ const displayQuote = props => {
       </div>
     </div>
   ) : (
-    <div className="UI-container">
+    <div className="DisplayQuoteUI-container">
       <CarWPMGauge second={second} char={char} />
       <div className="DisplayQuote-container">
         <Minimap />

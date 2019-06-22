@@ -1,4 +1,5 @@
 import React from "react";
+import "./Minimap.scss";
 
 const Minimap = () => {
   return (

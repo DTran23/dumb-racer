@@ -1,5 +1,6 @@
 import React from "react";
 import TypingSpeed from "../TypingSpeed/TypingSpeed";
+import "./Gauges.scss";
 
 const CarGauge = ({ second, char }) => {
   return (

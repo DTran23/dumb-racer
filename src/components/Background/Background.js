@@ -4,6 +4,7 @@ import Car1 from "../Cars/Car1";
 // import Car3 from "../Cars/Car3";
 import gameStartBG from "../../images/forest-bg3.jpg";
 import finishLineBG from "../../images/finish-line.jpg";
+import "./Background.scss";
 
 const bgStart = {
   backgroundImage: `url(${gameStartBG})`

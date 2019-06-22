@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import DisplayQuote from "./components/DisplayQuote/DisplayQuote";
 import Background from "./components/Background/Background";
 

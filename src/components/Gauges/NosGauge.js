@@ -1,4 +1,5 @@
 import React from "react";
+import "./Gauges.scss";
 
 const NosGauge = () => {
   return (
