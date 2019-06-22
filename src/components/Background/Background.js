@@ -1,7 +1,7 @@
 import React from "react";
 import Car1 from "../Cars/Car1";
-import Car2 from "../Cars/Car2";
-import Car3 from "../Cars/Car3";
+// import Car2 from "../Cars/Car2";
+// import Car3 from "../Cars/Car3";
 import gameStartBG from "../../images/forest-bg3.jpg";
 import finishLineBG from "../../images/finish-line.jpg";
 
@@ -19,8 +19,6 @@ const Background = ({ carPositioning, onFinish }) => {
   return (
     <div className="Background-img" style={onFinish ? bgFinish : bgStart}>
       <Car1 onFinish={onFinish} carPositioning={carPositioning} />
-      <Car2 />
-      <Car3 />
     </div>
   );
 };

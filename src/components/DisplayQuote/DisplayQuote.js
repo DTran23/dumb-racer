@@ -1,58 +1,37 @@
 import React from "react";
+import DisplayQuoteInput from "../DisplayQuote/DisplayQuoteInput";
+import DisplayQuoteArea from "../DisplayQuote/DisplayQuoteArea";
 import CarWPMGauge from "../CarWPMGauge/CarWPMGauge";
 import NosGauge from "../NosGauge/NosGauge";
 import Minimap from "../Minimap/Minimap";
 
 const displayQuote = props => {
-  let {
-    quote,
+  const {
+    fullPhrase,
     userInput,
     onUserInputChange,
     onFinish,
     second,
-    char,
-    word
+    char
   } = props;
-  const splitQuoteIntoChars = quote.split("");
-  if (onFinish) {
-    return (
-      <div className="DisplayQuote-container">
-        <div className="DisplayQuote-previewQuote">
-          <h1 className="DisplayQuote-h1">Congrats mffferrr</h1>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="UI-container">
-        <CarWPMGauge second={second} char={char} word={word} />
-        <div className="DisplayQuote-container">
-          <Minimap />
-          <div className="DisplayQuote-previewQuote">
-            {splitQuoteIntoChars.map((char, index) => {
-              let color;
-              if (index < userInput.length) {
-                color = char === userInput[index] ? "#04ad67" : "#ff373e";
-              }
 
-              return (
-                <span key={index} style={{ background: color }}>
-                  {char}
-                </span>
-              );
-            })}
-          </div>
-          <input
-            id="DisplayQuote-inputWord"
-            onChange={onUserInputChange}
-            autofocus="true"
-            autoComplete="off"
-          />
-        </div>
-        <NosGauge />
+  return onFinish ? (
+    <div className="DisplayQuote-container">
+      <div className="DisplayQuote-previewQuote">
+        <h1 className="DisplayQuote-h1">Congrats mffferrr</h1>
       </div>
-    );
-  }
+    </div>
+  ) : (
+    <div className="UI-container">
+      <CarWPMGauge second={second} char={char} />
+      <div className="DisplayQuote-container">
+        <Minimap />
+        <DisplayQuoteArea fullPhrase={fullPhrase} userInput={userInput} />
+        <DisplayQuoteInput onUserInputChange={onUserInputChange} />
+      </div>
+      <NosGauge />
+    </div>
+  );
 };
 
 export default displayQuote;

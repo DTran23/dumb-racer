@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-// import ReactDOM from 'react-dom';
 import "./App.css";
-// import TypingSpeed from "./TypingSpeed";
-// import CarGauge from "./components/CarWPMGauge/CarWPMGauge";
 import DisplayQuote from "./components/DisplayQuote/DisplayQuote";
 import Background from "./components/Background/Background";
 
@@ -37,7 +34,7 @@ export default class App extends Component {
         <DisplayQuote
           style={{ color: this.state.color }}
           word={this.state.word}
-          quote={this.state.fullPhrase}
+          fullPhrase={this.state.fullPhrase}
           userInput={this.state.userInput}
           onUserInputChange={this.onUserInputChange}
           onFinish={this.state.timerFinished}
@@ -56,7 +53,7 @@ export default class App extends Component {
     if (this.state.timerFinished) {
       e.target.value = "";
     }
-    console.log(value);
+
     this.onStartTimer();
     this.onFinishTimer(value);
     this.setState({

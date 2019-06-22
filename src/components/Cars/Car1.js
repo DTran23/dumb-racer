@@ -1,5 +1,5 @@
 import React from "react";
-import car1 from "../../images/apollo.png";
+import car1 from "../../images/gtx.png";
 
 const Car = ({ carPositioning, onFinish }) => {
   return (
