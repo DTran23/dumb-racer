@@ -128,7 +128,7 @@ code {
   position: absolute;
   left: 300px;
   bottom: 180px;
-  animation: car2 60s linear infinite;
+  animation: car2 50s linear infinite;
 }
 
 .Car3-img {

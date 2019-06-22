@@ -2,33 +2,14 @@ import React from "react";
 import Car1 from "./Car1";
 import Car2 from "./Car2";
 import Car3 from "./Car3";
-import bg from "./images/forest-bg.jpg";
+import bg from "./images/forest-bg3.jpg";
 import finishLineBG from "./images/finish-line.jpg";
-import styled, { css, keyframes } from "styled-components";
-
-const fadeIn = keyframes`
-  from {
-    left: -300px;
-  }
-  to {
-    left: 300px;
-  }
-`;
 
 let finishLineStyle = {
   backgroundImage: `url(${finishLineBG})`,
   transition: "opacity 1s linear",
   animation: "fade 1s linear"
 };
-
-// const animation = props =>
-//   css`
-//     ${fadeIn};
-//   `;
-
-let carFinishStyle = styled.div`
-  animation: ${fadeIn} 1s linear infinite;
-`;
 
 const Background = props => {
   const { position, onFinish } = props;
