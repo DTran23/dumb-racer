@@ -13,7 +13,12 @@ const TypingSpeed = props => {
       </div>
     );
   }
-  return null;
+  return (
+    <div className="TypingSpeed-wpm">
+      <div className="TypingSpeed-num">0</div>
+      <div className="TypingSpeed-num-sm">wpm</div>
+    </div>
+  );
 };
 
 export default TypingSpeed;

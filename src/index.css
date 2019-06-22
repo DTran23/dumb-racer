@@ -15,10 +15,11 @@ code {
 }
 
 .DisplayQuote-previewQuote {
+  border-radius: 1rem;
   width: 60%;
   text-align: left;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
+  font-size: 1.2vw;
+  line-height: 2.5vw;
   align-self: center;
   border: 2px solid #34fffd;
   background-color: #070b24;
@@ -29,30 +30,37 @@ code {
 
 .DisplayQuote-container {
   display: flex;
-  width: 80%;
   flex-direction: column;
   align-content: center;
+  width: 80%;
   font-size: 1.8rem;
 }
 
 #DisplayQuote-inputWord {
-  border: 1px solid #34fffd;
+  border-radius: 1rem;
   border: none;
   background-color: #070b24;
   color: #fff;
-  margin-top: 4rem;
+  margin-top: 2rem;
   align-self: center;
-  height: 4rem;
+  height: 10%;
   width: 60%;
-  font-size: 1.5rem;
-  padding: 0px 80px;
-  /* margin-bottom: 50px; */
-  /* border: 2px solid rgba(94, 255, 255, 0.5); */
-  /*  */
+  font-size: 2vh;
+  padding: 10px 80px;
 }
 
 #DisplayQuote-inputWord:focus {
-  outline-color: #34fffd;
+  box-shadow: inset 0 0 70px rgb(45, 33, 128, 0.5),
+    0px 0px 20px 2px rgba(46, 33, 128, 0.8);
+  outline-color: #5effff;
+  border-radius: 1rem;
+}
+
+.DisplayQuote-h1 {
+  text-align: center;
+  align-self: center;
+  text-shadow: 0px 0px 0px black, 0 0 25px rgba(52, 255, 252, 0.5),
+    0 0 5px rgba(52, 255, 252, 0.5);
 }
 
 .TypingSpeed-wpm,
@@ -68,16 +76,17 @@ code {
   text-shadow: 0px 0px 0px black, 0 0 65px rgb(45, 33, 128, 0.9),
     0 0 5px rgb(52, 255, 253, 0.3);
   color: #fff;
-  line-height: 7rem;
   align-self: center;
   justify-self: center;
-  font-size: 5rem;
+  font-size: 5vw;
   font-weight: 700;
 }
 .TypingSpeed-num-sm,
 .NosGauge-num-sm {
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1vw;
+  font-weight: 700;
   justify-content: center;
   color: #34fffd;
   text-shadow: 0px 0px 0px black, 0 0 25px rgb(45, 33, 128, 0.5),
@@ -90,14 +99,12 @@ code {
 }
 
 .Background-img {
-  /* border: 1px solid #34fffd; */
   position: relative;
-  height: 500px;
   width: 100%;
-  margin-bottom: 60px;
+  height: 45%;
+  margin-bottom: 40px;
   background-color: #080416;
-  /* background: url("./images/forest-bg.jpg"); */
-  background-position: bottom left;
+  background-position: center;
   animation: move-background 30s linear infinite;
   overflow: hidden;
 }
@@ -176,11 +183,11 @@ code {
 
 .UI-container {
   display: flex;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   align-content: center;
   flex-direction: row;
   width: 100vw;
-  height: 100%;
+  height: 40vh;
 }
 
 .CarGauge,
@@ -197,8 +204,8 @@ code {
     0px 0px 10px 2px rgb(45, 33, 128, 0.5);
   background-color: rgba(7, 11, 36, 0.3);
   border: 2px solid rgba(94, 255, 255, 0.5);
-  /* (45, 33, 128, 0.5) */
 }
+
 .CarGauge-border,
 .NosGauge-border {
   box-sizing: border-box;
@@ -213,8 +220,23 @@ code {
   width: 30vw;
 }
 
+.NosGauge-border {
+  border: 3px solid #4fffa4;
+  box-shadow: inset 0 0 70px rgba(55, 223, 136, 0.4),
+    0px 0px 20px 2px rgba(55, 223, 136, 0.3);
+}
+
+.NosGauge {
+  border: 3px solid #4fffa4;
+  box-shadow: inset 0 0 70px rgba(55, 223, 136, 0.2),
+    0px 0px 20px 2px rgba(55, 223, 136, 0.2);
+}
+
 .CarGauge-border {
   margin-left: 80px;
+}
+.NosGauge-num-sm {
+  color: #4fffa4;
 }
 
 .NosGauge-border {
@@ -223,15 +245,16 @@ code {
 
 .Minimap-container {
   display: flex;
-  height: 5rem;
+  align-content: center;
   justify-content: center;
+  /* height: 5rem; */
 }
 
 .Minimap-bar {
   position: relative;
   justify-self: center;
   margin-bottom: 2rem;
-  height: 5px;
+  height: 0.5vw;
   border-radius: 1rem;
   box-shadow: 0px 0px 25px 1px rgb(45, 33, 128, 0.5);
   background-color: #5effff;
@@ -242,8 +265,8 @@ code {
   box-sizing: border-box;
   display: flex;
   position: absolute;
-  top: -12px;
-  left: 30px;
+  top: -0.5rem;
+  left: 30;
   align-content: center;
   justify-content: center;
   width: 1.4vw;

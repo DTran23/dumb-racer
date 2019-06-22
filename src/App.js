@@ -2,11 +2,9 @@ import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
 import "./App.css";
 // import TypingSpeed from "./TypingSpeed";
-import CarGauge from "./CarGauge";
-import DisplayQuote from "./DisplayQuote";
-import Background from "./Background";
-
-// import Car1 from "./Car1";
+// import CarGauge from "./components/CarWPMGauge/CarWPMGauge";
+import DisplayQuote from "./components/DisplayQuote/DisplayQuote";
+import Background from "./components/Background/Background";
 
 export default class App extends Component {
   constructor() {
@@ -27,31 +25,27 @@ export default class App extends Component {
     };
   }
 
-  componentDidMount() {
-    // window.addEventListener("input", this.onUserInputChange);
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <div className="App">
-        <div className="App-container">
-          <Background
-            position={this.state.carPositioning}
-            onFinish={this.state.timerFinished}
-          />
-          <DisplayQuote
-            style={{ color: this.state.color }}
-            word={this.state.word}
-            quote={this.state.fullPhrase}
-            userInput={this.state.userInput}
-            onUserInputChange={this.onUserInputChange}
-            onFinish={this.state.timerFinished}
-            onFinishButton={this.onRestart}
-            second={this.state.sec}
-            char={this.state.char}
-            word={this.state.word}
-          />
-        </div>
+        <Background
+          carPositioning={this.state.carPositioning}
+          onFinish={this.state.timerFinished}
+        />
+        <DisplayQuote
+          style={{ color: this.state.color }}
+          word={this.state.word}
+          quote={this.state.fullPhrase}
+          userInput={this.state.userInput}
+          onUserInputChange={this.onUserInputChange}
+          onFinish={this.state.timerFinished}
+          onFinishButton={this.onRestart}
+          second={this.state.sec}
+          char={this.state.char}
+          word={this.state.word}
+        />
       </div>
     );
   }

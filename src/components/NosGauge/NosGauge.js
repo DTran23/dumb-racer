@@ -1,7 +1,6 @@
 import React from "react";
 
-const NosGauge = props => {
-  const { second, char, word } = props;
+const NosGauge = () => {
   return (
     <div className="NosGauge-border">
       <div className="NosGauge">

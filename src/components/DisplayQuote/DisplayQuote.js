@@ -1,7 +1,7 @@
 import React from "react";
-import CarGauge from "./CarGauge";
-import NosGauge from "./NosGauge";
-import Minimap from "./Minimap";
+import CarWPMGauge from "../CarWPMGauge/CarWPMGauge";
+import NosGauge from "../NosGauge/NosGauge";
+import Minimap from "../Minimap/Minimap";
 
 const displayQuote = props => {
   let {
@@ -25,7 +25,7 @@ const displayQuote = props => {
   } else {
     return (
       <div className="UI-container">
-        <CarGauge second={second} char={char} word={word} />
+        <CarWPMGauge second={second} char={char} word={word} />
         <div className="DisplayQuote-container">
           <Minimap />
           <div className="DisplayQuote-previewQuote">

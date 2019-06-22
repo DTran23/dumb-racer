@@ -1,5 +1,5 @@
 import React from "react";
-import TypingSpeed from "./TypingSpeed";
+import TypingSpeed from "../TypingSpeed/TypingSpeed";
 
 const CarGauge = props => {
   const { second, char, word } = props;
