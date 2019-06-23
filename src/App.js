@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PlayGame from "./components/PlayGame/PlayGame";
-import CarSlider from "./components/MainPage/CarSlider";
+import MainPage from "./components/MainPage/MainPage";
 import SocialMedia from "./components/MainPage/SocialMedia";
 import Header from "./components/Header/Header";
 
@@ -13,8 +13,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <SocialMedia />
-            <Route path="/" exact component={CarSlider} />
+            <Route path="/" exact component={MainPage} />
             <Route path="/play" exact component={PlayGame} />
           </div>
         </BrowserRouter>

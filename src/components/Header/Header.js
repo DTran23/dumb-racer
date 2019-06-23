@@ -22,7 +22,7 @@ const Header = () => {
             Play Now
           </Link>
         </Nav>
-        <Form inline>
+        <Form inline className="Header-signup">
           <Button className="sign-up" variant="outline-light">
             Signup
           </Button>
