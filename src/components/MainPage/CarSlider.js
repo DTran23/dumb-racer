@@ -28,25 +28,35 @@ class CarSlider extends Component {
     const { index, direction } = this.state;
 
     return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-        indicators={false}
-        fade={true}
-        controls={false}
-        interval="3000"
-      >
-        <Carousel.Item>
-          <img className="d-block w-100" src={carSlide1} alt="First slide" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={carSlide2} alt="Second slide" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={carSlide3} alt="Third slide" />
-        </Carousel.Item>
-      </Carousel>
+      <div className="CarSlider-container">
+        <div className="CarSlider-content">
+          <h1>Type Faster</h1>
+          <p>
+            Improve your typing skills while competing in fast-paced races with
+            up to 5 typers from around the world. Compete against your friends,
+            earn new cars, track your scores, and so much more... all for free!
+          </p>
+        </div>
+        <Carousel
+          activeIndex={index}
+          direction={direction}
+          onSelect={this.handleSelect}
+          indicators={false}
+          fade={true}
+          controls={false}
+          interval="3000"
+        >
+          <Carousel.Item>
+            <img className="d-block w-100" src={carSlide1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={carSlide2} alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={carSlide3} alt="Third slide" />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     );
   }
 }

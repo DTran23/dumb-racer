@@ -10,12 +10,11 @@ const PlayNow = () => {
       <div className="PlayNow-content">
         <div className="PlayNow-current">
           <h5>Current Car</h5>
-          <h3>Lamborghini Aventador</h3>
+          <p>Lamborghini Aventador</p>
         </div>
         <div className="PlayNow-specs">
           <h5>Specs</h5>
-          <h6>Max Speed: 300km/h</h6>
-          <h6>Accerlation: 100km/s</h6>
+          <p>Max Speed: 300km/h Accerelation: 100km/s</p>
         </div>
         <img src={ferarriSideView} alt="ferrari side view" />
       </div>
