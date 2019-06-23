@@ -4,6 +4,7 @@ import "./CarSlider.scss";
 import carSlide1 from "../../images/car_slider1.jpg";
 import carSlide3 from "../../images/car_slider2.jpg";
 import carSlide2 from "../../images/car_slider3.jpeg";
+import carSlide4 from "../../images/car_slider4.jpeg";
 
 class CarSlider extends Component {
   constructor(props, context) {
@@ -54,6 +55,9 @@ class CarSlider extends Component {
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={carSlide3} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={carSlide4} alt="Fourth slide" />
           </Carousel.Item>
         </Carousel>
       </div>

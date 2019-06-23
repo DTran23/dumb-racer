@@ -19,7 +19,7 @@ const PlayNow = () => {
         <img src={ferarriSideView} alt="ferrari side view" />
       </div>
       <Button className="PlayNow-btn" variant="outline-light">
-        Play Now
+        Race as Guest
       </Button>
     </div>
   );
