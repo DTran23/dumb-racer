@@ -1,7 +1,7 @@
 @import "../Variables";
 
 .Header-signup {
-  width: 30rem;
+  width: 30%;
   height: 100%;
   justify-content: space-between;
 }
@@ -48,11 +48,24 @@
     letter-spacing: 3px;
     text-align: center;
     width: 25rem;
+
+    & a {
+      color: #fff;
+      padding: 0 0;
+    }
   }
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: $text-color;
+  padding: 0 0;
   letter-spacing: 1px;
   margin-left: 5rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-bottom: 3px solid $main-color;
+    color: #fff;
+  }
 }

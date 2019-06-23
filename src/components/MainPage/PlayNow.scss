@@ -30,8 +30,8 @@
 
 .PlayNow-current,
 .PlayNow-specs {
-  align-self: center;
-  margin: 0rem 2rem;
+  align-self: baseline;
+  margin: 2rem 2rem;
   z-index: 15;
   color: $text-secondary;
   text-transform: uppercase;
@@ -66,7 +66,7 @@
   @include Main-btn;
   width: 30rem;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   height: 100%;
   padding: 0 0;
   margin: 0 0;

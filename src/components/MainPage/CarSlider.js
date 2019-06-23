@@ -31,6 +31,7 @@ class CarSlider extends Component {
     return (
       <div className="CarSlider-container">
         <div className="CarSlider-content">
+          <h5>Realtime Competitive Typing</h5>
           <h1>Type Faster</h1>
           <p>
             Improve your typing skills while competing in fast-paced races with

@@ -9,7 +9,7 @@ const PlayNow = () => {
     <div className="PlayNow-container">
       <div className="PlayNow-content">
         <div className="PlayNow-current">
-          <h5>Current Car</h5>
+          <h5>Car</h5>
           <p>Lamborghini Aventador</p>
         </div>
         <div className="PlayNow-specs">

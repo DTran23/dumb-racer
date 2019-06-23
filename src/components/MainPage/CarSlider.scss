@@ -1,7 +1,21 @@
 @import "../Variables";
 
 .carousel {
+  position: relative;
   height: 100vh;
+
+  // &-indicators {
+  //   margin-bottom: 10rem;
+  //   position: absolute;
+  //   display: flex;
+  //   top: 0;
+  //   left: 20px;
+  //   flex-direction: column;
+
+  // & li {
+  //   height: 30px;
+  //   width: 5px;
+  // }
 }
 
 .carousel-item {
@@ -12,23 +26,31 @@
   position: absolute;
   z-index: 50;
   width: 30%;
-  top: 30%;
-  left: 8%;
-  color: #fff;
+  top: 25%;
+  left: 10%;
+  text-transform: uppercase;
 
   h1 {
+    color: #fff;
     font-family: $header-font;
     font-style: italic;
     font-size: 6rem;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     line-height: 6rem;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 2rem;
   }
 
+  h5 {
+    color: $main-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
   p {
-    font-size: 1.3rem;
+    text-transform: none;
+    font-size: 1.2rem;
     line-height: 2.5rem;
     font-weight: 300;
     color: rgb(226, 226, 226);

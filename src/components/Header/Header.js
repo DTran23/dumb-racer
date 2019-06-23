@@ -7,7 +7,11 @@ const Header = () => {
   return (
     <div>
       <Navbar className="Navbar" variant="dark">
-        <Navbar.Brand className="Navbar-brand">Typebeast</Navbar.Brand>
+        <Navbar.Brand className="Navbar-brand">
+          <Link to="/" className="nav-link">
+            Typebeast
+          </Link>
+        </Navbar.Brand>
         <Nav className="NavLinks mr-auto">
           <Link to="/" className="nav-link">
             Home
